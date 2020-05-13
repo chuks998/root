@@ -1,0 +1,140 @@
+"""
+author name: chukwudi precious valentine
+email: valentineprecious103@gmail.com
+phone: 08026874564
+address: 18 Etta Agbor street, Calabar, Nigeria
+
+"""
+
+print("THIS CODE WAS WRITTEN BY Chuks(DOCTOR). IT IS MEANT TO ASSIST\nIN YOUR DAILY WINNINGS.\n")
+
+first_bar_open, first_bar_close = float(input("first bar OPEN: ")), float(input("first bar CLOSE: \n"))
+second_bar_open, second_bar_close = float(input("second bar OPEN: ")), float(input("second bar CLOSE: \n"))
+third_bar_open, third_bar_close = float(input("third bar OPEN: ")), float(input("third bar CLOSE: \n"))
+fourth_bar_open, fourth_bar_close = float(input("fourth bar OPEN: ")), float(input("fourth bar CLOSE: \n"))
+fifth_bar_open, fifth_bar_close = float(input("fifth bar OPEN: ")), float(input("fifth bar CLOSE: \n"))
+sixth_bar_open, sixth_bar_close = float(input("sixth bar OPEN: ")), float(input("sixth bar CLOSE: \n"))
+seventh_bar_open, seventh_bar_close = float(input("seventh bar OPEN: ")), float(input("seventh bar CLOSE: \n"))
+eighth_bar_open, eighth_bar_close = float(input("eighth bar OPEN: ")), float(input("eighth bar CLOSE: \n"))
+ninth_bar_open, ninth_bar_close = float(input("ninth bar OPEN: ")), float(input("ninth bar CLOSE: \n"))
+tenth_bar_open, tenth_bar_close = float(input("tenth bar OPEN: ")), float(input("tenth bar CLOSE: \n"))
+
+print("############################################################################\n")
+
+# AVERAGE MOVEMENT OF THE BARS
+
+avg1 = (first_bar_open + first_bar_close) / 2
+avg2 = (second_bar_open + second_bar_close) / 2
+avg3 = (third_bar_open + third_bar_close) / 2
+avg4 = (fourth_bar_open + fourth_bar_close) / 2
+avg5 = (fifth_bar_open + fifth_bar_close) / 2
+avg6 = (sixth_bar_open + sixth_bar_close) / 2
+avg7 = (seventh_bar_open + seventh_bar_close) / 2
+avg8 = (eighth_bar_open + eighth_bar_close) / 2
+avg9 = (ninth_bar_open + ninth_bar_open) / 2
+avg10 = (tenth_bar_open + tenth_bar_close) / 2
+
+# CLOSING AVERAGE MOVEMENT OF TH BARS
+
+avg_close = (first_bar_close + second_bar_close + third_bar_close + fourth_bar_close + fifth_bar_close
+             + sixth_bar_close + seventh_bar_close + eighth_bar_close + ninth_bar_open + tenth_bar_close
+             ) / 10
+avg_open = (first_bar_open + second_bar_open + third_bar_open + fourth_bar_open + fifth_bar_open + sixth_bar_open
+            + seventh_bar_open + eighth_bar_open + ninth_bar_open + tenth_bar_open
+            ) / 10
+
+print(f"open average is {avg_open}\nclosing average is {avg_close}")
+
+if avg_close > tenth_bar_close:
+    print("market will bull")
+elif avg_close < tenth_bar_close:
+    print("market will bear")
+
+number_of_pip = (avg_open - avg_close) / 2
+pip = number_of_pip * 100000
+if number_of_pip > 0:
+    print(f"Expected number of pip market will BULL is estimated\n{pip} pips")
+elif number_of_pip < 0:
+    print(f"Expected number of pip market will BEAR is estimated\n{pip} pips")
+
+take_profit = tenth_bar_close + (pip / 10000)
+print(f"take profit in {take_profit}")
+
+if __name__ == "__main__":
+    def future():
+        avg11 = (avg1+avg2+avg3+avg4+avg5+avg6+avg7+avg8+avg9+avg10)/10
+        avg12 = (avg2+avg3+avg4+avg5+avg6+avg7+avg8+avg9+avg10+avg11)/10
+        avg13 = (avg3+avg4+avg5+avg6+avg7+avg8+avg9+avg10+avg11+avg12)/10
+        avg14 = (avg4+avg5+avg6+avg7+avg8+avg9+avg10+avg11+avg12+avg13)/10
+        avg15 = (avg5+avg6+avg7+avg8+avg9+avg10+avg11+avg12+avg13+avg14)/10
+        avg16 = (avg6+avg7+avg8+avg9+avg10+avg11+avg12+avg13+avg14+avg15)/10
+        avg17 = (avg7+avg8+avg9+avg10+avg11+avg12+avg13+avg14+avg15+avg16)/10
+        avg18 = (avg8+avg9+avg10+avg11+avg12+avg13+avg14+avg15+avg16+avg17)/10
+        avg19 = (avg9+avg10+avg11+avg12+avg13+avg14+avg15+avg16+avg17+avg18)/10
+        avg20 = (avg10+avg11+avg12+avg13+avg14+avg15+avg16+avg17+avg18+avg19)/10
+
+        if avg10 > avg11:
+            message = "11th bar likely to be a BEAR"
+            print(message)
+        elif avg10 < avg11:
+            message = "11th bar likely to be a BULL"
+            print(message)
+
+        if avg11 > avg12:
+            message = "12th bar likely to be a BEAR"
+            print(message)
+        elif avg11 < avg12:
+            message = "12th bar likely to be a BULL"
+            print(message)
+        if avg12 > avg13:
+            message = "13th bar likely to be a BEAR"
+            print(message)
+        elif avg12 < avg13:
+            message = "13th bar likely to be a BULL"
+            print(message)
+        if avg13 > avg14:
+            message = "14th bar likely to be a BEAR"
+            print(message)
+        elif avg13 < avg14:
+            message = "14th bar likely to be a BULL"
+            print(message)
+
+        if avg14 > avg15:
+            message = "15th bar likely to be a BEAR"
+            print(message)
+        elif avg14 < avg15:
+            message = "15th bar likely to be a BULL"
+            print(message)
+        if avg15 > avg16:
+            message = "16th bar likely to be a BEAR"
+            print(message)
+        elif avg15 < avg16:
+            message = "16th bar likely to be a BULL"
+            print(message)
+        if avg16 > avg17:
+            message = "17th bar likely to be a BEAR"
+            print(message)
+        elif avg16 < avg17:
+            message = "17th bar likely to be a BULL"
+            print(message)
+        if avg17 > avg18:
+            message = "18th bar likely to be a BEAR"
+            print(message)
+        elif avg17 < avg18:
+            message = "18th bar likely to be a BULL"
+            print(message)
+        if avg18 > avg19:
+            message = "19th bar likely to be a BEAR"
+            print(message)
+        elif avg18 < avg19:
+            message = "19th bar likely to be a BULL"
+            print(message)
+        if avg19 > avg20:
+            message = "20th bar likely to be a BEAR"
+            print(message)
+        elif avg19 < avg20:
+            message = "20th bar likely to be a BULL"
+            print(message)
+
+
+    print(future())
